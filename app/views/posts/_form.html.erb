@@ -1,0 +1,7 @@
+<h1><%= @post.id ? 'Edit Post' : 'Create Post' %></h1>
+<hr/>
+<%= form_for @post do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content, required: true, autofocus: true %>
+  <%= f.submit %>
+  <% end %>
