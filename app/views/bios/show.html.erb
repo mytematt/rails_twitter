@@ -1,2 +1,5 @@
-<h1>Bios#show</h1>
-<p>Find me in app/views/bios/show.html.erb</p>
+<h1><%= @user.first_name %> <%= @user.last_name %>
+<br/>
+
+<h3><%= link_to 'Create Profile', new_bio_path %>
+<h3><%= link_to 'Edit Profile', edit_bio_path(@user) %></h3>

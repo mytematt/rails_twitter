@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
 
-  resources :bios
+  
+    resources :bios
+  
 
   resources :users do
     resources :comments, only: [:new, :create]

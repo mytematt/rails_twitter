@@ -1,0 +1,7 @@
+<h1>Write a Comment</h1>
+<hr/>
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.label :message %>
+  <%= f.text_area :message, required: true, autofocus: true %>
+  <%= f.submit %>
+  <% end %>

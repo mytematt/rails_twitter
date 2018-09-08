@@ -1,6 +1,6 @@
 <h1>Welcome <%= current_user.first_name %> </h1>
 <br/>
-
+<%= link_to 'Profile Page', bio_path(:id) %>
 <h2> Please select a post </h2>
 
 <%= link_to 'Create new post', new_post_path %>
@@ -10,6 +10,10 @@
 <ul>
   <% @posts.each do |post| %>
     <li><%= link_to post.content, post_path(post) %></li>
-  <% end %>
+    <%= link_to 'Edit Post', edit_post_path(post) %>
+    <%= link_to 'Delete', post_path(post), method: :delete %>
+    <br/>
+    <hr/>
+    <% end %>
 </ul>
 
