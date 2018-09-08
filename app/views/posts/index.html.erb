@@ -1,0 +1,15 @@
+<h1>Welcome <%= current_user.first_name %> </h1>
+<br/>
+
+<h2> Please select a post </h2>
+
+<%= link_to 'Create new post', new_post_path %>
+
+<hr/>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.name, post_path(post) %></li>
+  <% end %>
+</ul>
+
